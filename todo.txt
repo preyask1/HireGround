@@ -1,0 +1,3 @@
+Update scoring.py to use the new scoring logic
+Update resume_analyzer.py to use the new resume scoring logic
+Update main.py to use the new resume scoring logic
