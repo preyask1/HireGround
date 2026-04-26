@@ -1,6 +1,6 @@
 import time
 from playwright.sync_api import sync_playwright
-from playwright_stealth import stealth_sync
+from playwright_stealth import Stealth
 from core.domain.models import JobStatus
 from infrastructure.persistence.repository import SQLiteJobRepository
 
@@ -27,7 +27,7 @@ class ApplyAdapter:
             )
             
             page = browser_context.new_page()
-            stealth_sync(page)
+            Stealth().apply_stealth_sync(page)
             
             for job in jobs:
                 print(f"Applying for: {job.title} at {job.url}")
